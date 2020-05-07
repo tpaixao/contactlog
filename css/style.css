@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #fdfdfd;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin-right: 1rem;
+}
+h1 {
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  display: block;
+  /*grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));*/
+  /*grid-gap: 1rem;*/
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 1rem 0;
+}
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /*width: 15rem auto;*/
+  height: 4rem;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 10px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.card--title {
+  color: #222;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.date-separator{
+		text-align: left;
+		font-size: 0.8rem;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #222;
+}
+
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	background-color:#e74c3c;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	/*box-shadow: 2px 2px 3px #999;*/
+}
+
+.add-button{
+	color:#FFF;
+	background-color:#e74c3c;
+	display: block;
+	width: 100%;
+	border: none;
+	height: 40px;
+	border-radius: 10px;
+	padding-top: 10px;
+}
+input{
+	display: block;
+	font-size: 1.2rem;
+	height: 40px;
+	width: 100%;
+	/*padding: 20px;*/
+	/*padding-bottom: 15px;*/
+}
+label{
+	float: left;
+}
+
+
