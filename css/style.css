@@ -10,7 +10,7 @@ body {
   font-size: 1rem;
 }
 main {
-  max-width: 900px;
+  max-width: 600px;
   margin: auto;
   padding: 0.5rem;
   text-align: center;
@@ -29,7 +29,8 @@ li {
   margin-right: 1rem;
 }
 h1 {
-  color: #e74c3c;
+	color: #e74c3c;
+  /*color: limegreen;*/
   margin-bottom: 0.5rem;
 }
 
@@ -41,26 +42,6 @@ h1 {
   align-items: center;
   margin: auto;
   padding: 1rem 0;
-}
-.card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  /*width: 15rem auto;*/
-  height: 4rem;
-  background: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 10px;
-  margin: auto;
-  overflow: hidden;
-}
-
-.card--title {
-  color: #222;
-  font-weight: 700;
-  text-transform: capitalize;
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
 }
 
 .date-separator{
@@ -78,32 +59,42 @@ h1 {
 	float: right;
 }
 
-
-.float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	font-size: 1.5rem;
-	font-weight: bold;
-	background-color:#e74c3c;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-	/*box-shadow: 2px 2px 3px #999;*/
+nav a{
+	background-color: royalblue;
+  color: white;
+  padding: .5em .5em;
+  text-decoration: none;	
+	border-radius: 10px;
 }
+nav a.danger{background-color: gainsboro;}
 
 .add-button{
 	color:#FFF;
-	background-color:#e74c3c;
+	background-color: #e74c3c;
 	display: block;
 	width: 100%;
 	border: none;
 	height: 40px;
 	border-radius: 10px;
-	padding-top: 10px;
+	/*padding: 5px;*/
+	font-size: 1.2rem;
+	margin-top: 10px;
 }
+
+.cancel-button{
+	color:#000;
+	background-color: gainsboro;
+	display: block;
+	width: 100%;
+	border: none;
+	height: 40px;
+	border-radius: 10px;
+	padding: 5px;
+	font-size: 1.2rem;
+	text-decoration: none;
+	margin-top: 10px;
+}
+
 input{
 	display: block;
 	font-size: 1.2rem;
@@ -115,5 +106,4 @@ input{
 label{
 	float: left;
 }
-
 

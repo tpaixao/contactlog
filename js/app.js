@@ -83,6 +83,7 @@ const clearAll= () => {
 	showContacts()
 }
 
+
 const showAddForm = () => {
 	//shows add form 
 	let date = new Date()
@@ -92,18 +93,21 @@ const showAddForm = () => {
 	//for safari
 	let datevalue = year.toString() + '-' + ("0"+( month.toString())).slice(-2) + '-' + ( "0"+day.toString() ).slice(-2) 
 	let output = `
-	<form id="add_form">
+	<form id="add_form" onsubmit="addContact()" >
 		<label for="name">Name*</label>
 		<input name="name" type="text" placeholder="name" required>
 		<label for="date">Date*</label>
 		<input name="date" type="date" value=${datevalue} required>
 		<label for="duration">Duration</label>
 		<input name="duration" type="number" min="0" step=1 placeholder="duration (min)" >
-		<button onclick="addContact()" class="add-button">Add</button>
+		<a href="/" class="cancel-button" >Cancel</a>
+		<button type="submit" class="add-button">Add</button>
 	</form>
 	`
   container.innerHTML = output
 }
+
+
 
 document.addEventListener("DOMContentLoaded", showContacts)
 
