@@ -100,7 +100,7 @@ const showAddForm = () => {
 		<input name="date" type="date" value=${datevalue} required>
 		<label for="duration">Duration</label>
 		<input name="duration" type="number" min="0" step=1 placeholder="duration (min)" >
-		<a href="/" class="cancel-button" >Cancel</a>
+		<a href="/contactlog" class="cancel-button" >Cancel</a>
 		<button type="submit" class="add-button">Add</button>
 	</form>
 	`
