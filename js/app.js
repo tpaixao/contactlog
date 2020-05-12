@@ -135,6 +135,8 @@ const download_data=()=>{
 	download(JSON.stringify(contacts),"contacts.json","text/json")
 }
 
+
 const email_data=()=>{
 	window.location.href="mailto:?subject=ContactLog&body="+encodeURI( JSON.stringify(contacts) )+";"
+	//window.location.href="mailto:?subject=ContactLog&body="+encodeURI( json_to_csv(contacts) )+";"
 }
