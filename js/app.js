@@ -134,3 +134,7 @@ document.addEventListener("DOMContentLoaded", showContacts)
 const download_data=()=>{
 	download(JSON.stringify(contacts),"contacts.json","text/json")
 }
+
+const email_data=()=>{
+	window.location.href="mailto:?subject=ContactLog&body="+encodeURI( JSON.stringify(contacts) )+";"
+}
