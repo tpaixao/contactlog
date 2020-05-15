@@ -164,3 +164,23 @@ const email_data=()=>{
 	window.location.href="mailto:?subject=ContactLog&body="+encodeURI(output)
 	//window.location.href="mailto:?subject=ContactLog&body="+encodeURI( json_to_csv(contacts) )+";"
 }
+
+const display_info = () => {
+	let output='';
+
+	output+=`
+	<h2>info</h2>
+	<p style="{text-align:left;}">
+	A basic app to keep an offline log of the people you interact with.
+	If you have any problems or comments, <a href="mailto:tpaixao@igc.gulbenkian.pt">send me an email</a><br/>. 
+	</p>
+	<h3>Changelog</h3>
+	<ol>
+	<li class="left">15.05.2020 - made the email export prettier.</li></br>
+	<li class="left">10.05.2020 - Initial release</li></br>
+	</ol>
+	<a href="/contactlog" class="add-button" >OK</a>
+	`
+
+	container.innerHTML=output;
+}
