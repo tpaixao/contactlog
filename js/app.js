@@ -137,6 +137,30 @@ const download_data=()=>{
 
 
 const email_data=()=>{
-	window.location.href="mailto:?subject=ContactLog&body="+encodeURI( JSON.stringify(contacts) )+";"
+	function date2int(date){
+		return date.replace(/-/g,'')	
+	}
+
+	let days = []
+	contacts.forEach(
+		(el)=>{ days.push(el.date) })
+	
+	let unique_days = days.filter((v, i, a) => a.indexOf(v) === i); 
+	unique_days=unique_days.sort( (a,b) => ( parseInt(date2int( b ))-parseInt(date2int( a))
+	));
+    output=''
+	unique_days.forEach(
+		(date)=>{	
+			//add events from the day
+			//output+="<ul>"
+			contacts.forEach(
+				(el) => { 
+					if(el.date==date) { 
+						output+=`${el.name},${el.date},${el.duration}\n` 
+					}
+				})
+			//output+="</ul>"
+		})
+	window.location.href="mailto:?subject=ContactLog&body="+encodeURI(output)
 	//window.location.href="mailto:?subject=ContactLog&body="+encodeURI( json_to_csv(contacts) )+";"
 }
