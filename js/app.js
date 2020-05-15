@@ -75,7 +75,7 @@ const loadContacts = () => {
 }
 
 const clearAll= () => {
-	let clear = confirm("Are you sure?")
+	let clear = confirm("This will clear all your data.\nAre you sure?")
 	if (clear){
 		contacts.length = 0
 		saveContacts()
