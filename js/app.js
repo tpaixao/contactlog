@@ -100,7 +100,7 @@ const showAddForm = () => {
 		<input name="date" type="date" value=${datevalue} required>
 		<label for="duration">Duration</label>
 		<input name="duration" type="number" min="0" step=1 placeholder="duration (min)" >
-		<a href="/contactlog" class="cancel-button" >Cancel</a>
+		<a href="javascript:showContacts()" class="cancel-button" >Cancel</a>
 		<button type="submit" class="add-button">Add</button>
 	</form>
 	`
@@ -163,4 +163,24 @@ const email_data=()=>{
 		})
 	window.location.href="mailto:?subject=ContactLog&body="+encodeURI(output)
 	//window.location.href="mailto:?subject=ContactLog&body="+encodeURI( json_to_csv(contacts) )+";"
+}
+
+const display_info = () => {
+	let output='';
+
+	output+=`
+	<h2>info</h2>
+	<p style="{text-align:left;}">
+	A basic app to keep an offline log of the people you interact with.
+	If you have any problems or comments, <a href="mailto:tpaixao@igc.gulbenkian.pt">send me an email</a><br/>. 
+	</p>
+	<h3>Changelog</h3>
+	<ol reversed>
+	<li class="left">15.05.2020 - made the email export prettier.</li></br>
+	<li class="left">10.05.2020 - Initial release</li></br>
+	</ol>
+	<button onclick="showContacts()" class="add-button">OK</button>
+	`
+
+	container.innerHTML=output;
 }
