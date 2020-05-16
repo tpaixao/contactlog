@@ -100,7 +100,7 @@ const showAddForm = () => {
 		<input name="date" type="date" value=${datevalue} required>
 		<label for="duration">Duration</label>
 		<input name="duration" type="number" min="0" step=1 placeholder="duration (min)" >
-		<a href="/contactlog" class="cancel-button" >Cancel</a>
+		<a href="javascript:showContacts()" class="cancel-button" >Cancel</a>
 		<button type="submit" class="add-button">Add</button>
 	</form>
 	`
@@ -179,7 +179,7 @@ const display_info = () => {
 	<li class="left">15.05.2020 - made the email export prettier.</li></br>
 	<li class="left">10.05.2020 - Initial release</li></br>
 	</ol>
-	<a href="/contactlog" class="add-button" >OK</a>
+	<a href="javascript:showContacts()" class="add-button" >OK</a>
 	`
 
 	container.innerHTML=output;
