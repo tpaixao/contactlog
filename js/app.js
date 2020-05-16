@@ -175,11 +175,11 @@ const display_info = () => {
 	If you have any problems or comments, <a href="mailto:tpaixao@igc.gulbenkian.pt">send me an email</a><br/>. 
 	</p>
 	<h3>Changelog</h3>
-	<ol>
+	<ol reversed>
 	<li class="left">15.05.2020 - made the email export prettier.</li></br>
 	<li class="left">10.05.2020 - Initial release</li></br>
 	</ol>
-	<a href="javascript:showContacts()" class="add-button" >OK</a>
+	<button onclick="showContacts()" class="add-button">OK</button>
 	`
 
 	container.innerHTML=output;
