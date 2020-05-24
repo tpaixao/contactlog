@@ -111,15 +111,15 @@ const showAddForm = () => {
 
 document.addEventListener("DOMContentLoaded", showContacts)
 
-// add serviceworker
-//if ("serviceWorker" in navigator) {
-  //window.addEventListener("load", function() {
-    //navigator.serviceWorker
-      //.register("/serviceWorker.js")
-      //.then(res => console.log("service worker registered"))
-      //.catch(err => console.log("service worker not registered", err))
-  //})
-//}
+//add serviceworker
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker
+      .register("/serviceWorker.js")
+      .then(res => console.log("service worker registered"))
+      .catch(err => console.log("service worker not registered", err))
+  })
+}
 
 //unregister serviceWorker - for update
 //navigator.serviceWorker.getRegistration().then(function(reg) {
@@ -176,6 +176,7 @@ const display_info = () => {
 	</p>
 	<h3>Changelog</h3>
 	<ol reversed>
+	<li class="left">24.05.2020 - added service worker for offline function.</li></br>
 	<li class="left">15.05.2020 - made the email export prettier.</li></br>
 	<li class="left">10.05.2020 - Initial release</li></br>
 	</ol>
