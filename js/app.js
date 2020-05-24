@@ -176,7 +176,7 @@ const display_info = () => {
 	</p>
 	<h3>Changelog</h3>
 	<ol reversed>
-	<li class="left">24.05.2020 - added service worker for offline function.</li></br>
+	<li class="left">24.05.2020 - added service worker for offline functionality.</li></br>
 	<li class="left">15.05.2020 - made the email export prettier.</li></br>
 	<li class="left">10.05.2020 - Initial release</li></br>
 	</ol>
